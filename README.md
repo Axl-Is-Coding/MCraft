@@ -24,7 +24,7 @@ MCraft is a **native Android port** of Minecraft Java Edition, built on top of [
 
 MCraft/
 ├── KnowledgeBase/     # Documentation + code comments
-├── Original/          # Pure Minosoft (time capsule)
+├── Original/          # Pure Minosoft 
 ├── Modification/      # Modified Minosoft
 └── Reconstruction/    # Future standalone structure
 
@@ -47,7 +47,6 @@ MCraft is open source because:
 
 - **Minosoft** - Moritz Zwerger (bixilon) - The foundation
 - **MCraft** - axlittleYT - The Android port
-- **The Pig** - Moral support 🐷
 
 ---
 
