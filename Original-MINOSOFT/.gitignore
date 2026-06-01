@@ -1,0 +1,20 @@
+/target/
+out/
+.idea/
+*.iml
+hs_err_pid*.log
+
+# Ignore Gradle project-specific cache directory
+.gradle
+.home
+
+.kotlin/
+
+# Ignore Gradle build output directory
+build
+
+it/
+
+.*~
+
+*.perf
