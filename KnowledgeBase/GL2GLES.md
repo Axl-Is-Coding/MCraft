@@ -121,3 +121,5 @@ Most GLES 3.2 devices use **Tile-Based Deferred Renderers** (Apple, ARM Mali, Qu
 1.  **Always `glClear()` Everything:** On a mobile device, calling `glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT)` signals the GPU driver to discard the previous tile contents entirely. Omitting a clear forces the device to waste massive bandwidth copying old frame content from system RAM into high-speed on-chip cache.
 2.  **Invalidate Unneeded Buffers:** If you do not need the depth or stencil data after rendering a frame, call `glInvalidateFramebuffer()` before unbinding your FBO. This prevents the GPU from burning power writing depth values back out to the main system memory.
 3.  **Minimize State Changes:** Group draw calls tightly by shader program, then by texture bindings, and finally by uniform configurations. State changes are significantly more taxing on mobile platforms than on desktop environments.
+
+P.S: I ai generated this. Dont use. I will be reading and modifying it later
