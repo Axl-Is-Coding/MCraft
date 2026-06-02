@@ -22,9 +22,6 @@ The architecture, Minosoft modifications, and launcher backend are complete. Wha
 ---
 
 
-### OLD README
->>>>>>> 00852a96a05675f94c8c41790d6f9a8cf894bca0
-
 # MCraft - Minecraft Java Edition for Android
 
 > *"Java Edition in your pocket. Not Bedrock. Not a launcher. The real thing."*
