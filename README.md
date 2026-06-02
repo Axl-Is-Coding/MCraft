@@ -14,38 +14,12 @@ The architecture, Minosoft modifications, and launcher backend are complete. Wha
 - MCraft will remain open source under MIT
 
 **Current status:** Exploring solutions, experimenting, learning.
-=======
-# ⚠️ PROJECT STATUS: ABANDONED / NOT MAINTAINED ⚠️
 
-**This project is no longer being actively developed.**
-
-The architecture, Minosoft modifications, and launcher backend are complete. What's missing is the OpenGL ES renderer implementation and full integration with Minosoft's render loop.
-
-**Why abandoned:**
-- Requires deeper OpenGL ES knowledge
-- Kotlin expertise gap
-- Limited PC access
-
-**Anyone is free to fork and continue this work.**
-The KnowledgeBase will be occasionally changed.
->>>>>>> 00852a96a05675f94c8c41790d6f9a8cf894bca0
 
 ---
 
 *Original vision: Native Android port of Minecraft Java Edition* 
 ---
-
-### OLD README (Preserved for context)
-=======
-
-
-
-
-
-
-
-
-
 
 
 ### OLD README
