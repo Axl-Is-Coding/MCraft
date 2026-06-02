@@ -10,7 +10,7 @@ The architecture, Minosoft modifications, and launcher backend are complete. Wha
 - Limited PC access
 
 **Anyone is free to fork and continue this work.**
-The KnowledgeBase contains extensive documentation.
+The KnowledgeBase will be occasionally changed.
 
 ---
 
