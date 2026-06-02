@@ -42,6 +42,30 @@ class RenderLoop(
     init {
         context.profile.performance::slowRendering.observe(this) { this.slowRendering = it }
     }
+    
+   fun renderFrame() {  // ← Call this from onDrawFrame
+        // Single frame of rendering (not infinite loop)
+        if (context.state != RenderingStates.RUNNING) return
+        
+        context.renderStats.startFrame()
+        context.window.pollEvents()
+        context.window.begin()
+        context.framebuffer.update()
+        context.framebuffer.clear()
+        context.system.clear(IntegratedBufferTypes.COLOR_BUFFER, IntegratedBufferTypes.DEPTH_BUFFER)
+        context.input.draw()
+        context.camera.draw()
+        context.renderer.draw()
+        context.renderer.forEach { it.postDraw() }
+        context.queue.workTimeLimited(RenderConstants.MAXIMUM_QUEUE_TIME_PER_FRAME)
+        context.renderStats.endDraw()
+        context.light.updateAsync()
+        context.light.update()
+        context.textures.static.animator.updateAsync()
+        context.textures.static.animator.update()
+        context.window.end()
+        context.renderStats.endFrame()
+    }
 
     private fun loop() {
         if (context.state == RenderingStates.PAUSED) {

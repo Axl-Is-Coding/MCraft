@@ -51,3 +51,5 @@ MCraft is open source because:
 ---
 
 *"Rome wasn't built in a day, and neither is a Minecraft Java mobile port."*
+
+*"The resporitory is messy rn but i will be cleaning the mess later. Im just trying to make MCraft actually work"*

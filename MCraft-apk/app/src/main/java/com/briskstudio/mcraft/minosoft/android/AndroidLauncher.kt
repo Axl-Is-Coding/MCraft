@@ -1,7 +1,8 @@
 package de.bixilon.minosoft.android
 
 import android.content.Intent
-import de.bixilon.minosoft.gui.qmcl.LauncherActivity
+// Change from .gui.qmcl.LauncherActivity to .launcher.LauncherActivity
+import com.briskstudio.mcraft.launcher.LauncherActivity
 
 object AndroidLauncher {
     fun launchQMCL() {

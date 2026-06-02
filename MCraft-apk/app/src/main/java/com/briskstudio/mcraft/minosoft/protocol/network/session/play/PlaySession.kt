@@ -75,6 +75,7 @@ import de.bixilon.minosoft.util.logging.LogMessageType
 import java.util.concurrent.atomic.AtomicInteger
 
 
+
 class PlaySession(
     val connection: ServerConnection,
     val account: Account,
@@ -251,17 +252,38 @@ class PlaySession(
     }
 
     private fun establishRendering(latch: AbstractLatch?) {
-        val rendering = Rendering(this)
-        this.rendering = rendering
-        val renderLatch = CallbackLatch(1, latch)
-        rendering.start(renderLatch)
-        renderLatch.waitIfLess(2)
-        renderLatch += latch@{
-            if (renderLatch.count > 0) return@latch
-            establish(latch)
+        if (isAndroid()) {
+            // Use MCraft's Android renderer
+            try {
+                val rendering = com.briskstudio.mcraft.game.Render.AndroidRendering(this)
+                @Suppress("DEPRECATION")
+                this.rendering = rendering as? Rendering
+                val renderLatch = CallbackLatch(1, latch)
+                rendering.start(renderLatch)
+                renderLatch.waitIfLess(2)
+                renderLatch += latch@{
+                    if (renderLatch.count > 0) return@latch
+                    establish(latch)
+                }
+            } catch (e: Exception) {
+                Log.log(LogMessageType.RENDERING, LogLevels.FATAL) { "Failed to start Android renderer: ${e.message}" }
+                establish(latch)
+            }
+        } else {
+            // Original desktop code
+            val rendering = Rendering(this)
+            @Suppress("DEPRECATION")
+            this.rendering = rendering
+            val renderLatch = CallbackLatch(1, latch)
+            rendering.start(renderLatch)
+            renderLatch.waitIfLess(2)
+            renderLatch += latch@{
+                if (renderLatch.count > 0) return@latch
+                establish(latch)
+            }
         }
     }
-
+    
     override fun terminate() {
         connection.disconnect()
         state = PlaySessionStates.DISCONNECTED
@@ -285,5 +307,10 @@ class PlaySession(
                 ERRORED_CONNECTIONS.iterator().remove()
             }
         }
+    }
+    
+    private fun isAndroid(): Boolean {
+        return System.getProperty("java.vendor")?.contains("Android") == true
+            || System.getProperty("os.name")?.contains("Android") == true
     }
 }
