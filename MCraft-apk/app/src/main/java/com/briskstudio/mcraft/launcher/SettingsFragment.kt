@@ -13,7 +13,7 @@ import com.briskstudio.mcraft.R
 import com.briskstudio.mcraft.launcher.Backend.Launcher
 import com.briskstudio.mcraft.UserData.Data.SettingPrefs
 
-class SettingsUI : Fragment() {
+class SettingsFragment : Fragment() {
     
     private lateinit var seekRenderDistance: SeekBar
     private lateinit var tvRenderDistance: TextView

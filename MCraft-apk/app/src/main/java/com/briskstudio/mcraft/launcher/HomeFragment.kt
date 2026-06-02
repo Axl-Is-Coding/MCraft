@@ -15,7 +15,7 @@ import com.briskstudio.mcraft.launcher.Backend.Launcher
 import com.briskstudio.mcraft.launcher.Backend.VersionHandler.Data.MinecraftVersion
 import com.briskstudio.mcraft.launcher.Gui.Adapter.VersionAdapter
 
-class HomeUI : Fragment() {
+class HomeFragment: Fragment() {
     
     private lateinit var versionList: RecyclerView
     private lateinit var playButton: Button

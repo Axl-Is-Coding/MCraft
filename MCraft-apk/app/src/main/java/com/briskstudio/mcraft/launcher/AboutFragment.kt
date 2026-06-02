@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.briskstudio.mcraft.R
 
-class AboutUI : Fragment() {
+class AboutFragment: Fragment() {
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +31,7 @@ class AboutUI : Fragment() {
             appendLine()
             appendLine("Built on Minosoft by Moritz Zwerger")
             appendLine()
-            appendLine("Android Port by Axl (axlittleYT)")
+            appendLine("Android Port by WhoIsAxl? (Axl-Is-Coding)")
             appendLine()
             appendLine("Special thanks to:")
             appendLine("- Minosoft Contributors")

@@ -1,3 +1,28 @@
+# ⚠️ PROJECT STATUS: RESURRECTING / EXPERIMENTAL ⚠️
+
+**This project is being slowly revived.**
+
+The architecture, Minosoft modifications, and launcher backend are complete. What was missing is the OpenGL ES renderer implementation — but we're now exploring **LTW (Large Thin Wrapper)** as a translation layer instead of writing a renderer from scratch.
+
+**Why it stalled before:**
+- Required deeper OpenGL ES knowledge
+- Kotlin expertise gap
+- Limited PC access
+
+**What's happening now:**
+- Researching LTW (LGPL v3) to translate OpenGL 3.x → OpenGL ES 3.0
+- MCraft will remain open source under MIT
+
+**Current status:** Exploring solutions, experimenting, learning.
+
+---
+
+*Original vision: Native Android port of Minecraft Java Edition* 
+
+---
+
+### OLD README (Preserved for context)
+
 # MCraft - Minecraft Java Edition for Android
 
 > *"Java Edition in your pocket. Not Bedrock. Not a launcher. The real thing."*
@@ -18,7 +43,7 @@ MCraft is a **native Android port** of Minecraft Java Edition, built on top of [
 
 ## 🛠️ Current Status
 
-**Pre-alpha.** Building knowledge base. No APK yet.
+**Research phase.** Investigating LTW as a renderer backend. No APK yet.
 
 ```
 
@@ -36,20 +61,29 @@ MCraft/
 - Kirin 710, 3-4GB RAM, Mali-G51 GPU
 - If it runs on this, it runs on anything
 
-## 🤝 Open Source
+## 🤝 Open Source & License
 
-MCraft is open source because:
-- Minosoft is GPL-3.0
-- The community should own it, not me
-- Modders can add version support themselves
+**MCraft is MIT licensed.**  
+**LTW (renderer backend) is LGPL v3.**
+
+This means:
+- ✅ You can use MCraft code anywhere, even in closed-source projects
+- ✅ LTW remains free and open — modifications to LTW must stay LGPL
+- ✅ Your mods and addons can use any license
+- ❌ You cannot remove LTW's LGPL notice or prevent relinking
+
+**Why LGPL v3?** It lets us use LTW's powerful OpenGL translation without forcing MCraft to become GPL.
+
+[Full LGPL v3 text](./COPYING.LESSER)
 
 ## 📜 Credits
 
 - **Minosoft** - Moritz Zwerger (bixilon) - The foundation
-- **MCraft** - axlittleYT - The Android port
+- **LTW (Large Thin Wrapper)** - The renderer translation layer that made revival possible
+- **MCraft** - WhoisAxl? (Axl-Is-Coding) - The Android port + resurrection effort
 
 ---
 
 *"Rome wasn't built in a day, and neither is a Minecraft Java mobile port."*
 
-*"The resporitory is messy rn but i will be cleaning the mess later. Im just trying to make MCraft actually work"*
+*"But we found some bricks."*
