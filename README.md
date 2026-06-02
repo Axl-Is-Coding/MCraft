@@ -1,3 +1,34 @@
+# ⚠️ PROJECT STATUS: ABANDONED / NOT MAINTAINED ⚠️
+
+**This project is no longer being actively developed.**
+
+The architecture, Minosoft modifications, and launcher backend are complete. What's missing is the OpenGL ES renderer implementation and full integration with Minosoft's render loop.
+
+**Why abandoned:**
+- Requires deeper OpenGL ES knowledge
+- Kotlin expertise gap
+- Limited PC access
+
+**Anyone is free to fork and continue this work.**
+The KnowledgeBase contains extensive documentation.
+
+---
+
+*Original vision: Native Android port of Minecraft Java Edition* 
+
+
+
+
+
+
+
+
+
+
+
+
+### OLD README
+
 # MCraft - Minecraft Java Edition for Android
 
 > *"Java Edition in your pocket. Not Bedrock. Not a launcher. The real thing."*
